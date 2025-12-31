@@ -1,453 +1,353 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【朝5時】3ヶ月集中 早朝ECT習慣化コース | English Cultivation with Thunder</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Dawn English | 朝5時の英語アトリエ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* カスタムスタイル */
         body {
-            font-family: 'Inter', sans-serif;
-            color: #374151;
-            /* Charcoal Gray */
-            background-color: #f9fafb;
-            /* Light Gray Background */
-            font-size: 16px;
-            line-height: 1.6;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #FDFCFB;
+            color: #4A443F;
         }
 
-        @media (min-width: 768px) {
-            body {
-                font-size: 18px;
-                line-height: 1.75;
+        .font-serif {
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        .selection-orange::selection {
+            background-color: #ffedd5;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* ヒーローセクションのカスタム背景 */
-        .hero-bg {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            /* Sunrise Gradient */
-            color: #ffffff;
-            /* パターン画像のようなものは使用せず、クリーンなグラデーションで朝を表現 */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
         }
 
-        /* メインCTAボタンの強調スタイル */
-        .main-cta {
-            box-shadow: 0 10px 15px -3px rgba(255, 165, 0, 0.5), 0 4px 6px -2px rgba(255, 165, 0, 0.5);
+        .hero-gradient {
+            background: linear-gradient(to bottom, #1A1C2C 0%, #4A4E69 50%, #FDFCFB 100%);
+        }
+
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .lucide {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2px;
+        }
+
+        .price-card {
+            background: white;
+            border: 1px solid #E5E7EB;
             transition: all 0.3s ease;
         }
 
-        .main-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 20px -3px rgba(255, 165, 0, 0.7), 0 6px 8px -2px rgba(255, 165, 0, 0.7);
+        .price-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        .section-title {
-            position: relative;
-            display: inline-block;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 50%;
-            height: 4px;
-            background-color: #FFA500;
-            border-radius: 9999px;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
         }
     </style>
 </head>
 
-<body class="antialiased">
+<body class="selection-orange antialiased">
 
-    <!-- ヒーローセクション -->
-    <section class="hero-bg py-16 md:py-24 rounded-b-xl shadow-lg">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <span class="text-2xl font-bold tracking-widest block mb-4">ECT EARLY BIRD PLAN</span>
-            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-                【朝5時、世界が動き出す前に。】
-            </h1>
-            <p class="text-3xl md:text-4xl font-semibold mb-8">
-                自分を取り戻し、英語を耕す。
-            </p>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                「仕事や育児に追われ、自分の成長が後回しになっていませんか？」<br>
-                このコースは、<span class="font-bold">あなたの朝5時を「最高の自己投資の時間」に変え、3ヶ月で英語学習を無意識の習慣にする</span>ための完全個別伴走プログラムです。
-            </p>
-
-            <!-- CTAボタン -->
-            <a href="contact.html"
-                class="main-cta inline-block bg-white text-orange-500 font-bold text-xl py-4 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                【今すぐ申し込む】おためしセッション（60分/2,000円）はこちら
-            </a>
-            <p class="mt-4 text-sm font-medium">※先着2組限定の継続サポート枠に関する詳細をご案内します</p>
-        </div>
-    </section>
-
-    <!-- 課題提起セクション -->
-    <section class="py-16 md:py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12 section-title mx-auto w-fit">
-                なぜ、あなたの英語学習は継続できなかったのか？
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-orange-500">
-                    <p class="text-4xl mb-4">⏰</p>
-                    <h3 class="text-xl font-bold mb-3">課題 1: 時間がない</h3>
-                    <p>疲れた夜や移動時間では、集中力が続かず、結局YouTubeを見てしまう。</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-orange-500">
-                    <p class="text-4xl mb-4">📚</p>
-                    <h3 class="text-xl font-bold mb-3">課題 2: 教材選びに迷う</h3>
-                    <p>自分のレベルや興味に合った教材を探すのが面倒で、結局買っても積読状態。</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-orange-500">
-                    <p class="text-4xl mb-4">🚶</p>
-                    <h3 class="text-xl font-bold mb-3">課題 3: モチベーション維持</h3>
-                    <p>孤独な学習では、誰にも見られていないので、数週間でサボってしまう。</p>
-                </div>
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-500 py-4 md:py-8">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2 shrink-0">
+                <div class="w-6 h-6 md:w-8 md:h-8 bg-orange-400 rounded-full opacity-80 animate-pulse"></div>
+                <span class="text-lg md:text-xl font-bold tracking-tighter font-serif whitespace-nowrap">Dawn
+                    English</span>
             </div>
-        </div>
-    </section>
-
-    <!-- ECTの解決策セクション -->
-    <section class="py-16 md:py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12 section-title mx-auto w-fit">
-                ECTの解決策：3つの壁を破壊する仕組み
-            </h2>
-
-            <div class="overflow-x-auto">
-                <table class="min-w-full bg-white rounded-xl shadow-xl">
-                    <thead>
-                        <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
-                            <th class="py-3 px-6 text-left">課題</th>
-                            <th class="py-3 px-6 text-left">ECTの解決策</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-600 text-sm font-light">
-                        <tr class="border-b border-gray-200 hover:bg-orange-50 transition duration-150">
-                            <td class="py-3 px-6 text-left whitespace-nowrap font-bold">時間がない</td>
-                            <td class="py-3 px-6 text-left">
-                                <span class="font-bold text-orange-600">週2回 朝5時</span>に強制的にコーチと接続。残りはチャットで進捗を報告。
-                            </td>
-                        </tr>
-                        <tr class="border-b border-gray-200 hover:bg-orange-50 transition duration-150">
-                            <td class="py-3 px-6 text-left font-bold">教材選びに迷う</td>
-                            <td class="py-3 px-6 text-left">
-                                <span class="font-bold text-orange-600">AIを活用</span>し、あなたの興味あるPodcastや記事から<span
-                                    class="font-bold">専用の単語帳・要約</span>を自動生成。
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-orange-50 transition duration-150">
-                            <td class="py-3 px-6 text-left font-bold">モチベーション維持</td>
-                            <td class="py-3 px-6 text-left">
-                                3ヶ月間、あなたの生活リズムと目標を完全に理解した<span class="font-bold">専門コーチがマンツーマンで伴走</span>。
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- サービスの骨子と希少性 -->
-    <section class="py-16 md:py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl font-extrabold text-center mb-16 text-orange-600">
-                3ヶ月集中：早朝ECT習慣化コース
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- 仕組み 1: モーニングセッション -->
-                <div class="p-6 rounded-xl shadow-lg bg-blue-50">
-                    <div class="text-3xl text-orange-500 mb-3 font-extrabold">🌅 週2回 リアルタイム伴走</div>
-                    <p class="text-lg font-semibold mb-2">5:00〜5:30 モーニングセッション（30分）</p>
-                    <ul class="list-disc ml-5 text-gray-700 space-y-2">
-                        <li>脳が最もクリアな朝一、コーチとZOOM/LINEで接続。</li>
-                        <li>15分間の「クイック音読＆フィードバック」と15分の「学習計画立案」で、最高のスタートを切ります。</li>
-                    </ul>
-                </div>
-
-                <!-- 仕組み 2: チャットサポート -->
-                <div class="p-6 rounded-xl shadow-lg bg-blue-50">
-                    <div class="text-3xl text-orange-500 mb-3 font-extrabold">📱 毎日 チャットサポート</div>
-                    <p class="text-lg font-semibold mb-2">LINEで日々の学習を可視化</p>
-                    <ul class="list-disc ml-5 text-gray-700 space-y-2">
-                        <li>朝5時の「起きましたスタンプ」報告で、学習を可視化し、強制的に習慣化。</li>
-                        <li>日々の学習内容をLINEで共有すれば、コーチが即座に個別フォロー。</li>
-                        <li>（LINE:玄関 / Notion:学習の母艦）</li>
-                    </ul>
-                </div>
-
-                <!-- 仕組み 3: 希少性 -->
-                <div class="p-6 rounded-xl shadow-lg bg-blue-50 border-4 border-orange-500">
-                    <div class="text-3xl text-orange-500 mb-3 font-extrabold">⚠️ 限定2組</div>
-                    <p class="text-lg font-semibold mb-2">完全個別、濃密なサポートを保証</p>
-                    <p class="text-gray-700">
-                        コーチが一人ひとりの生活リズムと目標に深くコミットするため、定員を<span class="font-bold">先着2組</span>に設けさせていただきます。質の高い伴走をお約束します。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- オーダーメイドサポート（具体的な価値） -->
-    <section class="py-16 md:py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12 section-title mx-auto w-fit">
-                あなたの悩みに合わせたオーダーメイドサポート例
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- カード 1: ビジネスパーソン -->
-                <div class="bg-white p-6 rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
-                    <div class="text-xl font-bold mb-3 text-blue-600">💼 忙しいビジネスパーソン向け</div>
-                    <p class="text-gray-700 mb-3">
-                        伝えたい内容を覚えやすい<span class="font-bold">チャンク化</span>し、朝のセッションで実践的な音読練習を徹底伴走。
-                    </p>
-                    <p class="text-sm italic text-orange-500">
-                        【テクノロジー活用例】興味ある業界の海外記事の<span class="font-bold">要約と専門用語リスト</span>を自動作成。
-                    </p>
-                </div>
-
-                <!-- カード 2: 保護者 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
-                    <div class="text-xl font-bold mb-3 text-blue-600">👪 子育て中の保護者向け</div>
-                    <p class="text-gray-700 mb-3">
-                        お子さんの受験に向けた<span class="font-bold">願書添削</span>や、保護者英語面接の練習など、実践的なサポート。
-                    </p>
-                    <p class="text-sm italic text-orange-500">
-                        【テクノロジー活用例】全編英語のPodcastから、聞き取りにくい部分の<span class="font-bold">文字起こしと単語帳</span>を生成。
-                    </p>
-                </div>
-
-                <!-- カード 3: 研究職・専門職 -->
-                <div class="bg-white p-6 rounded-xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
-                    <div class="text-xl font-bold mb-3 text-blue-600">🧪 研究職・専門職向け</div>
-                    <p class="text-gray-700 mb-3">
-                        ご自身では億劫な<span class="font-bold">英語論文を一緒に読み解き</span>、必要な知識をティーチング。
-                    </p>
-                    <p class="text-sm italic text-orange-500">
-                        【テクノロジー活用例】難しい専門用語を抽出した<span class="font-bold">AI復習クイズ</span>をLINEで配信。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ロードマップ（期待できる変化） -->
-    <section class="py-16 md:py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-16 section-title mx-auto w-fit">
-                3ヶ月であなたに起こる変化
-            </h2>
-
-            <ol class="relative border-l border-orange-500 space-y-12 ml-4">
-                <li class="mb-10 ml-6">
-                    <span
-                        class="absolute flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full -left-4 ring-8 ring-white">
-                        <span class="text-white font-bold">1</span>
-                    </span>
-                    <h3 class="flex items-center mb-1 text-2xl font-semibold text-gray-900">1ヶ月目：習慣化フェーズ</h3>
-                    <p class="text-lg font-medium text-gray-700">
-                        朝5時に起きるのが当たり前に。英語学習が「意志」ではなく<span class="font-bold">「習慣」</span>に変わります。</p>
-                </li>
-                <li class="mb-10 ml-6">
-                    <span
-                        class="absolute flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full -left-4 ring-8 ring-white">
-                        <span class="text-white font-bold">2</span>
-                    </span>
-                    <h3 class="mb-1 text-2xl font-semibold text-gray-900">2ヶ月目：効率化フェーズ</h3>
-                    <p class="text-lg font-medium text-gray-700">
-                        テクノロジーの力で、難しいと感じていたインプットが楽に。学習の<span class="font-bold">効率が飛躍的に向上</span>します。</p>
-                </li>
-                <li class="ml-6">
-                    <span
-                        class="absolute flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full -left-4 ring-8 ring-white">
-                        <span class="text-white font-bold">3</span>
-                    </span>
-                    <h3 class="mb-1 text-2xl font-semibold text-gray-900">3ヶ月目：自走フェーズ</h3>
-                    <p class="text-lg font-medium text-gray-700">
-                        コーチがいなくても自走できる<span class="font-bold">「あなたの型」が完成</span>。英語学習が「楽しむもの」に変わります。</p>
-                </li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- 料金プランと割引 -->
-    <section class="py-16 md:py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-extrabold text-center mb-12 section-title mx-auto w-fit">
-                正規コース料金（3ヶ月集中）
-            </h2>
-
-            <div class="flex flex-col md:flex-row gap-8 items-stretch justify-center">
-                <!-- 通常料金 -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex-1 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-2 bg-gray-300"></div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">通常プラン</h3>
-
-                    <div class="space-y-4 mb-8">
-                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span class="text-gray-600 font-medium">伴走サポート・教材作成費</span>
-                            <span class="font-bold text-lg">90,000円</span>
-                        </div>
-                        <div class="text-xs text-gray-500 text-right -mt-2">（30,000円 × 3ヶ月）</div>
-
-                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
-                            <span class="text-gray-600 font-medium">セッション費用</span>
-                            <span class="font-bold text-lg">72,000円</span>
-                        </div>
-                        <div class="text-xs text-gray-500 text-right -mt-2">（週2回 × 30分 × 3ヶ月）</div>
-                    </div>
-
-                    <div class="text-center pt-4">
-                        <p class="text-sm text-gray-500 mb-1">税抜合計 162,000円</p>
-                        <p class="text-4xl font-extrabold text-gray-800">
-                            <span class="text-sm font-normal text-gray-500 align-top">税込</span>
-                            178,200<span class="text-xl">円</span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 割引プラン -->
-                <div
-                    class="bg-white p-8 rounded-2xl shadow-xl border-2 border-orange-500 flex-1 relative overflow-hidden transform md:-translate-y-4 z-10">
-                    <div
-                        class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                        RECOMMENDED</div>
-                    <h3 class="text-2xl font-extrabold text-orange-600 mb-6 text-center">地域・応援 割引</h3>
-
-                    <p class="text-center text-gray-600 mb-6 font-medium">
-                        「変わりたい」あなたを本気で応援するため、<br>特別な割引を用意しました。
-                    </p>
-
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-center bg-orange-50 p-3 rounded-lg">
-                            <span class="text-2xl mr-3">🍎</span>
-                            <div class="flex-1 font-bold text-gray-700">長野割</div>
-                            <span class="font-extrabold text-orange-600 text-xl">20% OFF</span>
-                        </div>
-                        <div class="flex items-center bg-orange-50 p-3 rounded-lg">
-                            <span class="text-2xl mr-3">🌋</span>
-                            <div class="flex-1 font-bold text-gray-700">小諸割</div>
-                            <span class="font-extrabold text-orange-600 text-xl">20% OFF</span>
-                        </div>
-                        <div class="flex items-center bg-orange-50 p-3 rounded-lg">
-                            <span class="text-2xl mr-3">🤝</span>
-                            <div class="flex-1 font-bold text-gray-700">紹介割</div>
-                            <span class="font-extrabold text-orange-600 text-xl">10% OFF</span>
-                        </div>
-                    </div>
-
-                    <div class="text-center border-t-2 border-dashed border-orange-200 pt-6">
-                        <p class="text-orange-600 font-bold mb-2">全部適用されると... 最大50%OFF！</p>
-                        <p class="text-5xl font-extrabold text-orange-600 leading-none">
-                            <span class="text-sm font-normal text-gray-500 align-top text-black">税込</span>
-                            89,100<span class="text-xl">円〜</span>
-                        </p>
-                        <p class="text-xs text-gray-400 mt-2">※小諸在住で紹介経由の場合</p>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-center mt-10 text-gray-600 text-sm">
-                まずは「おためしセッション」にて、現在の課題や目標をお聞かせください。<br>
-                あなたに最適なプランと学習計画をご提案します。
-            </p>
-        </div>
-
-        <!-- おためしセッションの詳細とCTA -->
-        <section id="cta-form" class="py-16 md:py-20 bg-orange-500 rounded-t-xl text-white">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-4xl font-extrabold mb-4">
-                    まずは「おためしセッション」へ
-                </h2>
-                <p class="text-xl mb-8">
-                    コースがあなたに合うか、コーチとの相性はどうかを確認するための、特別なファーストステップです。
-                </p>
-
-                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-2xl inline-block max-w-lg mx-auto mb-10">
-                    <h3 class="text-2xl font-bold mb-4 text-orange-600">おためしセッション 🧭</h3>
-                    <p class="text-5xl font-extrabold mb-6 text-orange-500">
-                        <span class="text-2xl align-top mr-1">¥</span>2,000<span
-                            class="text-base font-normal">（税込）</span>
-                    </p>
-                    <ul class="text-left space-y-3 mb-6">
-                        <li class="flex items-start">
-                            <span class="mr-2 text-orange-500">✓</span>
-                            <span><span class="font-bold">時間:</span> 60分程度のオンラインコーチング</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 text-orange-500">✓</span>
-                            <span><span class="font-bold">内容:</span> 現状把握、目標設定、具体的な行動目標の決定</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2 text-orange-500">✓</span>
-                            <span><span class="font-bold">特典:</span> あなた専用の<span
-                                    class="font-bold">「現状・目標シート」</span>をプレゼント📋</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- CTAボタン FINAL -->
+            <nav
+                class="flex items-center space-x-4 md:space-x-10 text-[10px] md:text-sm font-medium tracking-widest uppercase overflow-x-auto no-scrollbar py-2">
+                <a href="#concept" class="hover:text-orange-500 transition-colors whitespace-nowrap">Concept</a>
+                <a href="profile.html" class="hover:text-orange-500 transition-colors whitespace-nowrap">About</a>
+                <a href="testimonials.html" class="hover:text-orange-500 transition-colors whitespace-nowrap">Voice</a>
+                <a href="#price"
+                    class="hover:text-orange-500 transition-colors hidden sm:inline whitespace-nowrap">Price</a>
                 <a href="contact.html"
-                    class="main-cta inline-block bg-white text-orange-500 font-extrabold text-2xl py-5 px-10 rounded-full transition duration-300 transform hover:scale-105 border-4 border-white">
-                    限定2組の枠を確保する → おためしセッションに申し込む
+                    class="flex items-center justify-center px-3 py-1.5 md:px-5 md:py-2.5 border border-[#4A443F] hover:bg-[#4A443F] hover:text-white transition-all rounded-full leading-none whitespace-nowrap">Reserve</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-200 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-indigo-400 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <p
+                class="text-orange-200 font-medium tracking-[0.3em] mb-6 md:mb-8 animate-fade-in uppercase text-[10px] md:text-sm">
+                5:00 AM / A GIFT TO YOURSELF
+            </p>
+            <h1 class="text-white font-serif leading-[1.4] mb-10 md:mb-12 drop-shadow-sm animate-fade-in"
+                style="animation-delay: 0.2s; font-size: clamp(1.75rem, 7vw, 4.5rem);">
+                <span class="inline-block whitespace-nowrap">まだ誰も起きていない時間に、</span><br class="hidden md:block" />
+                <span class="inline-block whitespace-nowrap">一生ものの英語を、深く耕す。</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 animate-fade-in"
+                style="animation-delay: 0.4s;">
+                <a href="contact.html"
+                    class="w-full md:w-auto bg-white text-[#1A1C3C] px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg hover:bg-orange-50 transition-all transform hover:-translate-y-1 shadow-xl inline-block">
+                    おためしセッションのご案内
                 </a>
-                <p class="mt-4 text-sm font-medium">朝の時間を自分の成長に投資したい方は、今すぐ一歩踏み出しましょう。</p>
+                <p class="text-orange-100/80 text-xs md:text-sm italic text-center md:text-left">
+                    わたしの経験のすべてを、<br class="hidden md:block" />あなたの朝に還元します。
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- フッター -->
-        <footer class="bg-gray-800 text-white py-8">
-            <div class="max-w-6xl mx-auto px-4 text-center">
-                <p class="mb-4 text-lg font-semibold">English Cultivation with Thunder (ECTラボ)</p>
-                <nav class="space-x-4 text-sm">
-                    <a href="testimonials.html" class="hover:text-orange-400">経験者の声</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="profile.html" class="hover:text-orange-400">自己紹介</a>
-                    <span class="text-gray-500">|</span>
-                    <a href="contact.html" class="hover:text-orange-400">お問い合わせ</a>
-                </nav>
-                <p class="mt-6 text-xs text-gray-500">&copy; 2025 ECT All rights reserved.</p>
+    <!-- Concept - Story Style -->
+    <section id="concept" class="py-32 px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-20 text-center">
+                <span class="inline-block w-12 h-[1px] bg-orange-400 mb-8"></span>
+                <h2 class="text-3xl md:text-4xl font-serif italic text-gray-800">静かな朝は、自分へのギフト。</h2>
             </div>
-        </footer>
 
-        <!-- Scroll Top Button -->
-        <a href="#" id="scrollTopBtn"
-            class="fixed bottom-6 right-6 bg-orange-500 text-white p-4 rounded-full shadow-xl hover:bg-orange-600 transition-all duration-300 opacity-0 invisible z-50 transform hover:scale-110"
-            role="button" aria-label="ページトップへ戻る">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-        </a>
+            <div class="space-y-10 text-lg leading-relaxed text-slate-600">
+                <p>
+                    仕事、育児、社会的な役割。私たちは一日のほとんどを「誰かのため」に生きています。
+                    <br>…でも、朝の5時だけは違います。</br>
+                </p>
+                <p>
+                    静まり返ったリビング、淹れたてのコーヒー、そして一冊の英語論文や読みかけの洋書、書きかけのインター願書。
+                    この時間は、あなたが「あなた自身」に戻り、自分を耕すための聖域です。
+                </p>
+                <p class="font-bold text-[#4A443F]">
+                    一人で立ち向かうには、英語の世界は広すぎて、朝の時間は短すぎる。
+                    だからこそ、研究や経験に裏打ちされた「効率」と、AIによる「加速力」を味方につけよう。
+                    あなたが自走するまでの3ヶ月間、全力でサポートします。
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <script>
-            // Scroll to Top Button Logic
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
+    <!-- Experiences (Cards) - ② 体験重視版 -->
+    <section class="py-32 bg-stone-100/30 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-center text-3xl mb-20">たとえば、こんなふうに。</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-200">
+                    <div class="text-orange-400 mb-6"><i data-lucide="book-open" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">一緒に読み解く。</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        一人では億劫な論文や英語記事。朝のクリアな頭で、プロと一緒にゆっくり読んでいきましょう。
+                    </p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-200">
+                    <div class="text-orange-400 mb-6"><i data-lucide="sun" style="width: 32px; height: 32px;"></i></div>
+                    <h3 class="font-bold text-xl mb-4">習慣を整える。</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        「起きたらまずはスタンプを」。ゆるい繋がりと、コーチが待っているという環境が、あなたの自走を支えます。
+                    </p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-200">
+                    <div class="text-orange-400 mb-6"><i data-lucide="cpu" style="width: 32px; height: 32px;"></i></div>
+                    <h3 class="font-bold text-xl mb-4">AIを味方にする。</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm">
+                        面倒な教材作りはAIに任せて。あなたは「思考」や「声出し」といった、人間にしかできない学びに集中してください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    scrollTopBtn.classList.remove('opacity-0', 'invisible');
-                } else {
-                    scrollTopBtn.classList.add('opacity-0', 'invisible');
-                }
-            });
+    <!-- Professional Detail -->
+    <section id="about" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                <div class="relative">
+                    <div class="aspect-[4/5] bg-slate-200 rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="images/profile.png" alt="Morning Study"
+                            class="w-full h-full object-cover scale-[1.05] origin-top-left">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -right-8 bg-white p-5 rounded-2xl shadow-xl hidden lg:block max-w-[240px]">
+                        <p class="text-xs font-serif italic leading-relaxed text-gray-700">
+                            「こんな時代だからこそ、英語が話せるようになりたい。」<br />そんなあなたを応援します。
+                        </p>
+                    </div>
+                </div>
 
-            scrollTopBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        </script>
+                <div class="space-y-12">
+                    <h2 class="text-3xl font-serif">確かな専門性を、<br />やわらかい伴走にのせて。</h2>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        1,000名以上の学習者と対話してきた知見のすべてを、あなたの朝に。
+                    </p>
+                    <div class="border-l-4 border-orange-200 pl-6 space-y-6">
+                        <p class="text-slate-500 text-sm">詰め込みではなく、科学的なアプローチで自走できる力を。</p>
+                        <p class="text-slate-500 text-sm">論文読解から、洋書リーディング、インター受験、ビジネス英語まで。</p>
+                        <p class="text-slate-500 text-sm">小諸の風を感じながら、オンラインで全国へ伴走します。</p>
+                    </div>
+                    <div class="pt-6 font-serif">
+                        <a href="profile.html"
+                            class="text-orange-500 hover:underline decoration-orange-200 underline-offset-8">さんだーのプロフィールを詳しく見る
+                            →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section id="price" class="py-32 bg-stone-50 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20 md:mb-24">
+                <span class="inline-block w-12 h-[1px] bg-orange-400 mb-8"></span>
+                <h2 class="text-3xl font-serif">大切に育てたいから、しっかり伴走。</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <!-- 基本プラン -->
+                <div class="price-card p-12 rounded-[2.5rem]">
+                    <h3 class="text-sm font-bold tracking-widest text-slate-400 uppercase mb-8">Standard Course</h3>
+                    <h4 class="text-2xl font-serif mb-4">伴走3ヶ月コース</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-10">
+                        一過性の勉強で終わらせない。あなたの生活に「英語」が完全に溶け込むまで、3ヶ月間徹底的にサポートします。
+                    </p>
+                    <div class="mb-10">
+                        <p class="text-slate-400 text-xs mb-2">総額（税込）</p>
+                        <p class="text-4xl font-bold text-[#4A443F]">178,200 <span class="text-xl">円</span></p>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-sm text-slate-600">
+                        <li class="flex items-center"><i data-lucide="check"
+                                class="text-orange-400 mr-3 w-4 h-4"></i>週1回のオンラインセッション</li>
+                        <li class="flex items-center"><i data-lucide="check"
+                                class="text-orange-400 mr-3 w-4 h-4"></i>毎日の学習フィードバック</li>
+                        <li class="flex items-center"><i data-lucide="check"
+                                class="text-orange-400 mr-3 w-4 h-4"></i>あなた専用のAI教材カスタマイズ</li>
+                    </ul>
+                </div>
+
+                <!-- 割引・地域応援 -->
+                <div class="price-card p-12 rounded-[2.5rem] border-orange-100 bg-white relative">
+                    <div
+                        class="absolute -top-4 right-10 bg-orange-400 text-white text-[10px] font-bold tracking-widest px-4 py-1 rounded-full uppercase">
+                        Campaign</div>
+                    <h3 class="text-sm font-bold tracking-widest text-orange-400 uppercase mb-8">Local & Support
+                        Discount</h3>
+                    <h4 class="text-2xl font-serif mb-4">伴走3ヶ月コース（各種割引）</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-10">
+                        長野や小諸での挑戦、そして人との繋がりを応援します。
+                    </p>
+
+                    <div class="space-y-4 mb-10">
+                        <div class="flex justify-between items-center py-3 border-b border-stone-100">
+                            <span class="text-slate-600 text-sm font-medium">長野割</span>
+                            <span class="font-bold text-orange-500">20% OFF</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-stone-100">
+                            <span class="text-slate-600 text-sm font-medium">小諸割</span>
+                            <span class="font-bold text-orange-500">さらに5% OFF</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-stone-100">
+                            <span class="text-slate-600 text-sm font-medium">紹介割</span>
+                            <span class="font-bold text-orange-500">20% OFF</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-orange-50/50 p-6 rounded-2xl text-center">
+                        <p class="text-xs text-orange-400 font-bold mb-2">すべて適用時 最大40% OFF</p>
+                        <p class="text-3xl font-bold text-orange-500 tracking-tight">98,010 <span
+                                class="text-lg">円〜</span></p>
+                        <p class="text-[10px] text-orange-300 mt-2">※小諸在住・紹介経由の場合</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center mt-16 text-slate-400 text-xs">
+                まずは、お互いの相性を確認するための「おためしセッション」から始めましょう。
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-32 px-6 text-center shadow-[inset_0_1px_0_0_rgba(0,0,0,0.05)]">
+        <div class="max-w-2xl mx-auto">
+            <div class="flex justify-center mb-10 text-orange-300 animate-bounce">
+                <i data-lucide="coffee" style="width: 48px; height: 48px;"></i>
+            </div>
+            <h2 class="text-3xl font-serif mb-8 text-gray-800 tracking-tight">朝の光の中で、<br />少しだけ作戦会議を。</h2>
+            <div class="inline-block mb-12 p-8 bg-white rounded-3xl border border-stone-100 shadow-sm">
+                <p class="text-xs uppercase tracking-widest text-slate-400 mb-4">Trial Session</p>
+                <p class="text-2xl font-bold mb-2">おためし 60分 / 2,000 <span class="text-sm font-normal">円</span></p>
+                <p class="text-xs text-slate-400">あなたの現状分析と、明日からの学習ロードマップを提案します。</p>
+            </div>
+            <div class="flex flex-col items-center gap-6">
+                <a href="contact.html"
+                    class="w-full md:w-auto px-12 py-5 bg-[#4A443F] text-white rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg transform hover:-translate-y-1">
+                    空きスロットを確認する (Calendly)
+                </a>
+                <p class="text-sm text-slate-400">セッション前に質問がある方は、各種SNSからお気軽にお問い合わせください。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-slate-100 text-center text-[10px] tracking-[0.3em] text-slate-400 uppercase">
+        &copy; 2025 Dawn English. All rights reserved.
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+                header.classList.remove('py-8');
+                header.classList.add('py-4');
+            } else {
+                header.classList.remove('header-scrolled');
+                header.classList.remove('py-4');
+                header.classList.add('py-8');
+            }
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

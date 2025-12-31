@@ -1,131 +1,168 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自己紹介 | English Cultivation with Thunder</title>
-    <!-- Tailwind CSS CDN -->
+    <title>さんだーのこと | Dawn English</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            color: #374151;
-            background-color: #f9fafb;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #FDFCFB;
+            color: #4A443F;
         }
 
-        .hero-bg {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #ffffff;
+        .font-serif {
+            font-family: 'Shippori Mincho', serif;
         }
 
-        .main-cta {
-            box-shadow: 0 10px 15px -3px rgba(255, 165, 0, 0.5), 0 4px 6px -2px rgba(255, 165, 0, 0.5);
-            transition: all 0.3s ease;
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         }
 
-        .main-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 20px -3px rgba(255, 165, 0, 0.7), 0 6px 8px -2px rgba(255, 165, 0, 0.7);
+        .lucide {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2px;
         }
     </style>
 </head>
 
-<body class="antialiased flex flex-col min-h-screen">
+<body class="antialiased">
 
-    <!-- Header Navigation -->
-    <header class="bg-white shadow-sm py-4">
-        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <a href="index.html"
-                class="font-extrabold text-3xl tracking-tight text-gray-800 hover:text-orange-500 transition">ECTラボ</a>
-            <nav class="space-x-4 text-sm md:text-base">
-                <a href="testimonials.html" class="hover:text-orange-500 transition">経験者の声</a>
-                <a href="profile.html" class="font-bold text-orange-500">自己紹介</a>
-                <a href="contact.html" class="hover:text-orange-500 transition">お問い合わせ</a>
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-500 py-4 md:py-8">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 shrink-0 hover:opacity-80 transition-opacity">
+                <div class="w-6 h-6 md:w-8 md:h-8 bg-orange-400 rounded-full opacity-80 animate-pulse"></div>
+                <span class="text-lg md:text-xl font-bold tracking-tighter font-serif whitespace-nowrap">Dawn
+                    English</span>
+            </a>
+            <nav
+                class="flex items-center space-x-4 md:space-x-10 text-[10px] md:text-sm font-medium tracking-widest uppercase overflow-x-auto no-scrollbar py-2">
+                <a href="index.html#concept"
+                    class="hover:text-orange-500 transition-colors whitespace-nowrap">Concept</a>
+                <a href="profile.html" class="text-orange-500 transition-colors whitespace-nowrap">About</a>
+                <a href="testimonials.html" class="hover:text-orange-500 transition-colors whitespace-nowrap">Voice</a>
+                <a href="index.html#price"
+                    class="hover:text-orange-500 transition-colors hidden sm:inline whitespace-nowrap">Price</a>
+                <a href="contact.html"
+                    class="flex items-center justify-center px-3 py-1.5 md:px-5 md:py-2.5 border border-[#4A443F] hover:bg-[#4A443F] hover:text-white transition-all rounded-full leading-none whitespace-nowrap">Reserve</a>
             </nav>
         </div>
     </header>
 
     <!-- Page Title -->
-    <div class="hero-bg py-12">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-4xl font-extrabold text-white">自己紹介</h1>
-            <p class="mt-4 text-lg text-white opacity-90">About the Coach</p>
+    <section class="pt-32 md:pt-48 pb-12 md:pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="font-serif mb-6 tracking-tight leading-tight" style="font-size: clamp(2rem, 8vw, 3.5rem);">
+                さんだーのこと</h1>
+            <p class="text-slate-400 tracking-[0.3em] uppercase text-[10px] md:text-sm">About the Coach</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Profile Content -->
-    <section class="py-16 bg-white flex-grow">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row gap-12 items-center">
-                <!-- Profile Image Placeholder -->
-                <div class="w-full md:w-1/3">
-                    <div
-                        class="aspect-[3/4] rounded-xl shadow-lg flex items-center justify-center relative overflow-hidden group">
-                        <img src="images/profile.png" alt="Thunder Profile" class="w-full h-full object-cover">
+    <!-- Profile Detail -->
+    <section class="pb-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+                <div>
+                    <div class="aspect-[4/5] bg-slate-200 rounded-2xl overflow-hidden shadow-xl mb-12">
+                        <img src="images/original_profile.png" alt="Yuji Yamada Profile"
+                            class="w-full h-full object-cover scale-[1.05] origin-top-left">
                     </div>
                 </div>
 
-                <!-- Text Content -->
-                <div class="w-full md:w-2/3">
-                    <h2 class="text-3xl font-bold mb-2 text-gray-900">山田 雄司 <span
-                            class="text-base font-normal text-gray-600 ml-2">/ さんだー</span></h2>
-                    <p class="text-orange-600 font-bold mb-6 text-lg">元 開成中学校・高等学校 教諭 / 現 軽井沢風越学園教員スタッフ</p>
+                <div class="space-y-12">
+                    <div>
+                        <h2 class="text-3xl font-serif mb-4">山田 雄司 <span
+                                class="text-lg font-normal text-slate-400 ml-4">/ さんだー</span></h2>
+                        <p class="text-orange-500 font-medium mb-8">元 開成中学校・高等学校 教諭 / 現 軽井沢風越学園スタッフ</p>
 
-                    <div class="space-y-4 text-gray-700 leading-relaxed text-justify">
-                        <p>
-                            はじめまして、ECT代表の山田裕司（通称：Thunder）です。
-                        </p>
-                        <p>
-                            私はこれまで、<strong>開成中学校・高等学校</strong>や渋谷教育学園渋谷といった日本有数の進学校で、のべ1,000人以上の生徒たちと向き合ってきました。
-                            彼らの成長を間近で支える中で確信したのは、<span class="font-bold">「適切な仕組みと伴走があれば、人は誰でも変われる」</span>ということです。
-                        </p>
-                        <p>
-                            現在、私は2児の父として長野県小諸市で子育てをしながら、幼小中混在校の設立など<strong>「地域教育の未来」</strong>をつくる活動にも情熱を注いでいます。
-                            私が大人向けの英語コーチングに力を入れる理由、それは、地域や社会を支える大人たちこそが<strong>「学び続ける楽しさ」</strong>を取り戻すことで、次世代により良いバトンを渡せると信じているからです。
-                        </p>
-                        <p>
-                            忙しい毎日の中で、自分の成長を諦めていませんか？
-                            教育の最前線で培った知見と、Google認定教育者としてのテクノロジー活用、そして同じ時代を生きる親としての共感を持って、あなたの「変わりたい」という想いに全力で伴走します。
-                        </p>
+                        <div class="space-y-6 text-slate-600 leading-relaxed text-justify">
+                            <p>
+                                はじめまして、Dawn Englishの山田雄司（通称：さんだー）です。
+                            </p>
+                            <p>
+                                私はこれまで、開成中学校・高等学校や渋谷教育学園渋谷といった日本有数の進学校や、軽井沢風越学園というプロジェクトの学びを中心にした義務教育学校で、のべ1,000人以上の生徒たちと向き合ってきました。
+                                彼らの成長を間近で支える中で確信したのは、<span
+                                    class="text-[#4A443F] font-bold">「人の大きな変容を促すのは、適切な仕組みと丁寧な伴走」</span>ということです。
+                            </p>
+                            <p>
+                                現在、私は2児の父として長野県小諸市で子育てをしながら、<strong>「地域教育の未来」</strong>をつくる活動にも情熱を注いでいます。
+                                私が大人向けの英語コーチングに力を入れる理由、それは、社会を支える大人たちが<strong>「学び続ける楽しさ」</strong>を取り戻すことで、次世代により良いバトンを渡せると信じているからです。
+                            </p>
+                            <p>
+                                朝の5時。まだ世界が眠っている静かな時間に、自分自身と向き合い、対話する。
+                                教育の最前線で培った知見と、最新のテクノロジー、そして同じ時代を生きる親としての共感を持って、あなたの「耕す時間」に全力で伴走します。
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="mt-10 space-y-8">
-                        <!-- 経歴 -->
-                        <div>
-                            <h3 class="font-bold text-xl text-gray-800 border-b-2 border-orange-500 inline-block mb-4">
-                                略歴</h3>
-                            <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2">
-                                <li><strong>東京大学 教育学部</strong> 卒業</li>
-                                <li><strong>東京大学大学院 教育学研究科</strong> 修士課程修了（学校教育高度化専攻）</li>
-                                <li><strong>渋谷教育学園渋谷中学高等学校</strong> 英語科非常勤講師</li>
-                                <li><strong>開成中学校・高等学校</strong> 英語科専任教諭（4年間勤務、中1〜高3まで担当）</li>
-                                <li>現在は長野県にて、幼小中混在校の設立・運営に携わりながら、英語コーチとしても活動中。</li>
+                    <!-- Details -->
+                    <div class="space-y-12 pt-8">
+                        <!-- 略歴 -->
+                        <div class="border-t border-stone-100 pt-8">
+                            <h3 class="font-bold text-lg mb-6 flex items-center gap-3">
+                                <i data-lucide="history" class="text-orange-400"></i>
+                                略歴
+                            </h3>
+                            <ul class="text-slate-500 text-sm space-y-4 leading-relaxed tracking-wide">
+                                <li><strong class="text-slate-700">東京大学 教育学部</strong> 卒業</li>
+                                <li><strong class="text-slate-700">東京大学大学院 教育学研究科</strong> 修士課程修了（学校教育高度化専攻）</li>
+                                <li><strong class="text-slate-700">渋谷教育学園渋谷中学高等学校</strong> 英語科非常勤講師</li>
+                                <li><strong class="text-slate-700">開成中学校・高等学校</strong> 英語科専任教諭（4年間勤務）</li>
+                                <li><strong class="text-slate-700">軽井沢風越学園</strong> 外国語スタッフ（6年間勤務）</li>
                             </ul>
                         </div>
 
-                        <!-- 資格・実績 -->
-                        <div>
-                            <h3 class="font-bold text-xl text-gray-800 border-b-2 border-orange-500 inline-block mb-4">
-                                資格・実績</h3>
-                            <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2">
-                                <li>実用英語技能検定 <strong>1級</strong></li>
-                                <li>TOEIC L&R <strong>925点</strong></li>
-                                <li>EPT英語発音テスト <strong>89点</strong>（指導者レベル）</li>
-                                <li>中学校・高等学校教諭専修免許状（外国語・英語）</li>
-                                <li>Google for Education 認定教育者 レベル1 & 2</li>
+                        <!-- 資格 -->
+                        <div class="border-t border-stone-100 pt-8">
+                            <h3 class="font-bold text-lg mb-6 flex items-center gap-3">
+                                <i data-lucide="award" class="text-orange-400"></i>
+                                資格・実績
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-500 text-sm">
+                                <li class="flex items-center gap-2"><i data-lucide="check"
+                                        class="w-4 h-4 text-orange-300"></i>英検 1級</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check"
+                                        class="w-4 h-4 text-orange-300"></i>TOEIC L&R 925点</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check"
+                                        class="w-4 h-4 text-orange-300"></i>EPT英語発音 89点</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check"
+                                        class="w-4 h-4 text-orange-300"></i>Google 認定教育者 Level 1&2</li>
                             </ul>
                         </div>
 
                         <!-- 著書 -->
-                        <div>
-                            <h3 class="font-bold text-xl text-gray-800 border-b-2 border-orange-500 inline-block mb-4">
-                                主な著書・登壇</h3>
-                            <ul class="list-disc list-outside ml-5 text-gray-600 space-y-2">
-                                <li>『新Aクラス中学英語問題集』（1〜3年 共著 / 昇龍堂出版）</li>
-                                <li>『教育グローバル化のダイナミズム』（翻訳者代表 / 東信堂）</li>
-                                <li>全国英語教育学会 北海道研究大会での発表 など多数</li>
+                        <div class="border-t border-stone-100 pt-8">
+                            <h3 class="font-bold text-lg mb-6 flex items-center gap-3">
+                                <i data-lucide="book" class="text-orange-400"></i>
+                                主な著書
+                            </h3>
+                            <ul class="text-slate-500 text-sm space-y-4 leading-relaxed tracking-wide">
+                                <li>
+                                    『新Aクラス中学英語問題集』共著（昇龍堂出版）<br class="md:hidden">
+                                    <span class="inline-flex gap-4 mt-2 md:mt-0 md:ml-2">
+                                        <a href="https://amzn.to/4sf6Tid" target="_blank"
+                                            class="text-orange-500 hover:underline">1年</a>
+                                        <a href="https://amzn.to/44MN73M" target="_blank"
+                                            class="text-orange-500 hover:underline">2年</a>
+                                        <a href="https://amzn.to/492deGo" target="_blank"
+                                            class="text-orange-500 hover:underline">3年</a>
+                                    </span>
+                                </li>
+                                <li><a href="https://amzn.to/4q8Weo4" target="_blank"
+                                        class="hover:text-orange-500 hover:underline">『教育グローバル化のダイナミズム』（翻訳者代表 / 東信堂）</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -134,58 +171,33 @@
         </div>
     </section>
 
-    <!-- Mini CTA -->
-    <section class="py-12 bg-gray-100">
-        <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-6">まずは一度、お話ししましょう</h2>
-            <a href="contact.html"
-                class="main-cta inline-block bg-orange-500 text-white font-bold text-lg py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 border-4 border-transparent hover:border-orange-300">
-                おためしセッションに申し込む
-            </a>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-auto">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="mb-4 text-lg font-semibold"><a href="index.html" class="hover:text-orange-400 transition">English
-                    Cultivation with Thunder (ECTラボ)</a></p>
-            <nav class="space-x-4 text-sm">
-                <a href="testimonials.html" class="hover:text-orange-400">経験者の声</a>
-                <span class="text-gray-500">|</span>
-                <a href="profile.html" class="text-orange-400">自己紹介</a>
-                <span class="text-gray-500">|</span>
-                <a href="contact.html" class="hover:text-orange-400">お問い合わせ</a>
-            </nav>
-            <p class="mt-6 text-xs text-gray-500">&copy; 2025 ECT All rights reserved.</p>
+    <footer class="py-20 border-t border-slate-100 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <a href="contact.html"
+                class="inline-block px-12 py-5 bg-[#4A443F] text-white rounded-full font-bold hover:bg-orange-600 transition-all shadow-lg mb-16">
+                まずは、お話ししませんか？
+            </a>
+            <p class="text-[10px] tracking-[0.3em] text-slate-400 uppercase">
+                &copy; 2025 Dawn English. All rights reserved.
+            </p>
         </div>
     </footer>
 
-    <!-- Scroll Top Button -->
-    <a href="#" id="scrollTopBtn"
-        class="fixed bottom-6 right-6 bg-orange-500 text-white p-4 rounded-full shadow-xl hover:bg-orange-600 transition-all duration-300 opacity-0 invisible z-50 transform hover:scale-110"
-        role="button" aria-label="ページトップへ戻る">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </a>
-
     <script>
-        // Scroll to Top Button Logic
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-
+        const header = document.getElementById('main-header');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.remove('opacity-0', 'invisible');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+                header.classList.remove('py-8');
+                header.classList.add('py-4');
             } else {
-                scrollTopBtn.classList.add('opacity-0', 'invisible');
+                header.classList.remove('header-scrolled');
+                header.classList.remove('py-4');
+                header.classList.add('py-8');
             }
         });
-
-        scrollTopBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        lucide.createIcons();
     </script>
 </body>
 
