@@ -73,15 +73,9 @@
     <!-- Profile Detail -->
     <section class="pb-32 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
-                <div>
-                    <div class="aspect-[4/5] bg-slate-200 rounded-2xl overflow-hidden shadow-xl mb-12">
-                        <img src="images/original_profile.png" alt="Yuji Yamada Profile"
-                            class="w-full h-full object-cover scale-[1.05] origin-top-left">
-                    </div>
-                </div>
-
-                <div class="space-y-12">
+            <div class="flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+                <!-- Name & Greeting (order-1 on mobile, order-2 on desktop) -->
+                <div class="space-y-12 order-1 md:order-2">
                     <div>
                         <h2 class="text-3xl font-serif mb-4">山田 雄司 <span
                                 class="text-lg font-normal text-slate-400 ml-4">/ さんだー</span></h2>
@@ -89,7 +83,7 @@
 
                         <div class="space-y-6 text-slate-600 leading-relaxed text-justify">
                             <p>
-                                はじめまして、Dawn Englishの山田雄司（通称：さんだー）です。
+                                はじめまして、Dawn Englishの山田雄司(通称:さんだー)です。
                             </p>
                             <p>
                                 私はこれまで、開成中学校・高等学校や渋谷教育学園渋谷といった日本有数の進学校や、軽井沢風越学園というプロジェクトの学びを中心にした義務教育学校で、のべ1,000人以上の生徒たちと向き合ってきました。
@@ -106,8 +100,20 @@
                             </p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Details -->
+                <!-- Image (order-2 on mobile, order-1 on desktop) -->
+                <div class="order-2 md:order-1">
+                    <div class="aspect-[4/5] bg-slate-200 rounded-2xl overflow-hidden shadow-xl mb-12">
+                        <img src="images/original_profile.png" alt="Yuji Yamada Profile"
+                            class="w-full h-full object-cover scale-[1.05] origin-top-left">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details (outside the grid, below both columns) -->
+            <div class="max-w-6xl mx-auto mt-12">
+                <div class="md:ml-[calc(50%+2.5rem)]">
                     <div class="space-y-12 pt-8">
                         <!-- 略歴 -->
                         <div class="border-t border-stone-100 pt-8">
